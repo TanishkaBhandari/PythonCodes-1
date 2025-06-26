@@ -2,9 +2,7 @@ class ATM:
     def __init__(self, pin, balance=0):#AUTOMATICALLY RUNS AS CONSTRUCTOR WHEN NEW OBJ CREATED 
         self.pin = pin
         self.balance = balance
-#self - refers to the current object being created. It lets each object keep track of its own data. It’s similar to “this” in other programming languages.
-#pin AND balance ARE parameters passed during object creation. balance=0 means balance is optional—if not given, it defaults to 0.
-#- store the incoming pin value in the current object's attribute called self.pin.
+
 
     def insert_card(self):
         #print(self) object’s memory address shows up
@@ -15,7 +13,7 @@ class ATM:
             print('Invalid card')
             return False
         
-#Python automatically pehla argument object ka reference bhejta hai
+
 
     def verify_pin(self):
         if self.pin==int(input('Enter your pin ')):
@@ -68,10 +66,4 @@ def main():
         if atm.verify_pin():#runs if true comes 
             atm.show_menu()
 
-#- ATM(...) calls the class constructor __init__, passing the values pin=1234 and balance=1000.
-#Inside __init__, those values are stored in the new object’s attributes: self.pin = 1234 and self.balance = 1000.
-#The entire object is now stored in the variable atm.
 
-
-if __name__ == "__main__": #ensures the code runs only when the script is executed directly, not when imported.
-    main()
